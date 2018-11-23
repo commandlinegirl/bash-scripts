@@ -3,5 +3,5 @@
 Move a long list of files to a target dir (solution to "/bin/mv: Argument list too long")
 
 ```
-find $(pwd) -name "*.png" | xargs -I {} mv {} /path/to/target
+find $(pwd) -maxdepth 1 -name "*.png" | xargs -I {} mv {} /path/to/target
 ```
